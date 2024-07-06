@@ -1,0 +1,128 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <div id="wrapper-main">
+        <header role = "banner">
+          <div class="d-flex-row">
+            <div id="wrapper-title" class="wrapper-title">
+              <h1 id="title">Survey!</h1>
+              <p id="description">
+                We would like to hear your thoughts.<br />
+                Your feedback will be a great help to improve our services.
+              </p>
+            </div>
+            <div id="wrapper-img" class="wrapper-img">
+              <img src="assets/img/img-header.png"
+                alt="illustration of two people clapping hands" />
+            </div>
+          </div>
+        </header>
+    <!-----------------------------------Form-heading--------------------------------->
+    <h1 id="title">Survey Form</h1>
+    <!-----------------------------------Form-section--------------------------------->
+    <div id="main-form">
+        <p id="description">Dejanos saber en que podemos mejorar! (:</p>
+        <form id="survey-form" method="GET" action="/action_page.php">
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name"> Nombre: </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="email-label" for="name">Email: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="age"> Edad: </label>
+                </div>
+                <div class="rightTab">
+                    <input type="number" name="age" id="number" min="1" max="125" class="input-field" placeholder="Age">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="Currentpost">A que te dedicas actualmente?</label>
+                </div>
+                <div class="rightTab">
+                    <select id="dropdown" name="currentPos" class="dropdown">
+                            <option disabled value>Elija una opcion</option>
+                            <option  value="student">Estudiante</option>
+                            <option value="job">Trabajador</option>
+                            <option value="learner">Jugador de RuneScape</option>
+                            <option value="preferNo">Prefiero no indicar</option>
+                            <option value="other">Otro</option>
+                            </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="userRating">Que tan probable es que nos recomiendes?</label>
+                </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;">
+                        <li class="radio"><label>Lo haria<input name="radio-buttons" value="1"  type="radio" class="userRatings" ></label></li>
+                        <li class="radio"><label>Tal vez<input name="radio-buttons" value="2"  type="radio" class="userRatings" ></label></li>
+                        <li class="radio"><label>No lo haria<input name="radio-buttons" value="3"  type="radio" class="userRatings" ></label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="most-like">Que te gusta mas en este curso?</label>
+                </div>
+                <div class="rightTab">
+                    <select id="most-like" name="mostLike" class="dropdown">
+                        <option disabled selected value>Elija una opcion</option>
+                        <option value="challenges">Retos</option>
+                        <option value="projects">Proyectos</option>
+                        <option value="community">Comunidad</option>
+                        <option value="openSource">Open Source</option>
+                        </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">Cosas que se deberian mejorar a futuro:</label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox"><label><input name="prefer" value="1" type="checkbox" class="userRatings">Front-end Projects</label></li>
+                        <li class="checkbox"><input name="prefer" value="2" type="checkbox" class="userRatings">Back-end Projects</li>
+                        <li class="checkbox"><label><input name="prefer" value="4" type="checkbox" class="userRatings">Retos</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="5" type="checkbox" class="userRatings">Open Source Community</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="7" type="checkbox" class="userRatings">Videos</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="9" type="checkbox" class="userRatings">Wiki</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Regalos</label></li>
+                        <li class="checkbox"><label><input name="prefer" value="10" type="checkbox" class="userRatings">Cursos Adicionales</label></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="comments">Tienes comentarios adicionales?</label>
+                </div>
+                <div class="rightTab">
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" name="comment" placeholder="Hazlo saber!"></textarea>
+                </div>
+            </div>
+            <button id="submit" type="submit">Enviar</button>
+
+
+    <script href="/index.js"></script>
+</body>
+
+</html>
